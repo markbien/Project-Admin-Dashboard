@@ -7,7 +7,8 @@ html {
 
 :root {
     --plain-white-color: #f8fafc;
-    --main-background-color: #2563eb;
+    --theme: #2563eb;
+    --main-background-color: #cbd5e1;
 }
 
 body {
@@ -34,10 +35,17 @@ header {
     padding: 5px 0 5px 15px;
     margin-left: 10px;
     font-size: 1.1rem;
+    font-weight: bold;
     width: 400px;
-    outline-color: var(--main-background-color);
+    outline-color: var(--theme);
+    background: var(--main-background-color);
     border: 1px solid #ccc;
     border-radius: 25px;
+}
+
+.search input[type=search]:focus {
+    background: white;
+    color: black;
 }
 
 .profile-upper-right {
@@ -69,7 +77,7 @@ header .profile-upper-right img:nth-child(2) {
 }
 
 .actions button {
-    background: var(--main-background-color);
+    background: var(--theme);
     border: 1px solid white;
     border-radius: 20px;
     color: var(--plain-white-color);
@@ -80,7 +88,7 @@ header .profile-upper-right img:nth-child(2) {
 }
 
 .sidebar {
-    background: var(--main-background-color);
+    background: var(--theme);
     grid-area: 1 / 1 / -1 / 2;
     
     color: var(--plain-white-color);;
@@ -142,11 +150,35 @@ main {
     grid-area: 2 / 2 / -1 / -2;
 
     display: grid;
-    grid-template-columns: 2fr 2fr 1fr;
+    grid-template-columns: 1fr 250px;
     gap: 25px;
 }
 
-.card {
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.card,
+.announcements,
+.trending {
     background: var(--plain-white-color);
     border: transparent 1px solid;
+    padding: 15px;
+}
+
+.card > div {
+    text-align: right;
+}
+
+.card > div > img {
+    margin-top: 50px;
+    padding-right: 8px;
+}
+
+.announcements,
+.trending,
+.card {
+    border-radius: 8px;
 }
