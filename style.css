@@ -56,7 +56,7 @@ header {
     padding-right: 10px;
 }
 
-header .profile-upper-right img:nth-child(2) {
+.profile-picture {
     height: 50px;
     width: 50px;
     border-radius: 100%;
@@ -181,4 +181,22 @@ main {
 .trending,
 .card {
     border-radius: 8px;
+}
+
+.trending > div {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.trending .user {
+    flex: 1;
+}
+
+.user p {
+    margin: 10px 0;
+}
+
+.user p:nth-child(1) {
+    font-weight: bold;
 }
