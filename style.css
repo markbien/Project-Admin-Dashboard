@@ -87,11 +87,16 @@ header {
     margin: 0 5px;
 }
 
+.sticky {
+    position: fixed;
+}
+
 .sidebar {
     background: var(--theme);
     grid-area: 1 / 1 / -1 / 2;
     
-    color: var(--plain-white-color);;
+    color: var(--plain-white-color);
+    position: relative;
 }
 
 .sidebar ul {
