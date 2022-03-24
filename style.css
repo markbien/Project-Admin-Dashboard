@@ -7,6 +7,7 @@ html {
 
 :root {
     --plain-white-color: #f8fafc;
+    --main-background-color: #2563eb;
 }
 
 body {
@@ -22,6 +23,23 @@ header {
     grid-template: 1fr 2fr / 2fr 1fr;
 }
 
+.search {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 30px;
+}
+
+.search input[type=search] {
+    padding: 5px 0 5px 15px;
+    margin-left: 10px;
+    font-size: 1.1rem;
+    width: 400px;
+    outline-color: var(--main-background-color);
+    border: 1px solid #ccc;
+    border-radius: 25px;
+}
+
 .profile-upper-right {
     display: flex;
     justify-content: flex-end;
@@ -35,9 +53,34 @@ header .profile-upper-right img:nth-child(2) {
     width: 50px;
     border-radius: 100%;
 }
+.greetings {
+    padding-left: 25px;
+}
+
+.greetings > * {
+    font-weight: bold;
+    margin: 10px;
+}
+
+.actions {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.actions button {
+    background: var(--main-background-color);
+    border: 1px solid white;
+    border-radius: 20px;
+    color: var(--plain-white-color);
+    font-size: 1rem;
+    width: 80px;
+    padding: 7px 0;
+    margin: 0 5px;
+}
 
 .sidebar {
-    background: #2563eb;
+    background: var(--main-background-color);
     grid-area: 1 / 1 / -1 / 2;
     
     color: var(--plain-white-color);;
