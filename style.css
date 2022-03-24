@@ -160,6 +160,15 @@ main {
     gap: 25px;
 }
 
+.card {
+    transition: transform ease 0.2s;
+}
+
+.card:hover{
+    transform: scale(1.015);
+    border: 1px solid #d97706;
+}
+
 .card,
 .announcements,
 .trending {
@@ -175,6 +184,11 @@ main {
 .card > div > img {
     margin-top: 50px;
     padding-right: 8px;
+}
+
+.card > div > img:hover {
+    transform: scale(1.3);
+    cursor: pointer;
 }
 
 .announcements,
