@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 *, 
 *::before, 
 *::after {
@@ -13,6 +15,8 @@ picture {
 body {
   min-height: 100vh;
   margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #F5F5F5;
 }
 
 input,
@@ -22,26 +26,107 @@ button {
 
 .container {
   display: grid;
+  height: 100vh;
   grid-template-columns: min(175px, 20%) 1fr;
-  grid-template-rows: min(200px, 20%) 1fr;
-}
-
-main,
-header,
-.sidebar {
-  border: 1px solid black;
+  grid-template-rows: min(150px, 20%) 1fr;
 }
 
 .sidebar {
   grid-row: 1 / -1;
   grid-column: 1 / 2;
+
+  background-color: #404258;
+  color: white;
 }
 
 header {
   grid-row: 1 / 2;
+  grid-column: 2 / -1;
 
   display: flex;
   flex-direction: column;
+  justify-content: space-evenly;
+  padding: 15px;
+
+  background-color: #50577A;
+  color: white;
+}
+
+header img {
+  height: 40px;
+  width: 40px;
+  border-radius: 100%;
+}
+
+.top,
+.bottom,
+.search,
+.profile {
+  display: flex;
+}
+
+.top {
+  justify-content: space-between;
+}
+
+.search,
+.profile {
+  gap: 25px;
+  align-items: center;
+}
+
+.profile > img {
+  height: 20px;
+  width: 20px;
+}
+
+.search > img {
+  height: 20px;
+  min-height: 20px;
+  width: 20px;
+  min-width: 20px;
+}
+
+.search > input {
+  border-radius: 15px;
+  width: 400px;
+  position:relative;
+  left: -20px;
+  padding-left: 15px;
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 15px;
+}
+
+.left-profile {
+  display: flex;
+  gap: 15px;
+}
+
+.actions {
+  display: flex;
+  gap: 25px;
+}
+
+.actions > button {
+  border-radius: 15px;
+  background-color: white;
+  padding: 5px 15px;
+  border: 1px solid white;
+  cursor: pointer;
+}
+
+.actions > button:hover {
+  background-color: #DFD7BF;
+  color: black;
+}
+
+.actions > button:active {
+  scale: 1.1;
 }
 
 main {
