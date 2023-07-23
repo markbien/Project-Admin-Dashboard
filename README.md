@@ -1,0 +1,1 @@
+I created a new branch called version_2 where I can re-create this project to refresh me of the fundamentals I learned in The Odin Project.
