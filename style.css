@@ -1,0 +1,49 @@
+*, 
+*::before, 
+*::after {
+  box-sizing: border-box;
+}
+
+img,
+picture {
+  display: block;
+  max-width: 100%;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+}
+
+input,
+button {
+  font: inherit;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: min(175px, 20%) 1fr;
+  grid-template-rows: min(200px, 20%) 1fr;
+}
+
+main,
+header,
+.sidebar {
+  border: 1px solid black;
+}
+
+.sidebar {
+  grid-row: 1 / -1;
+  grid-column: 1 / 2;
+}
+
+header {
+  grid-row: 1 / 2;
+
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  grid-row: 2 / -1;
+}
